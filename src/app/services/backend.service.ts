@@ -1,21 +1,17 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class BackendService {
-  constructor(private http: HttpClient) { }
-
-  getSmokeTest() {
-    return this.http.get('/api/smoke').toPromise();
-  }
+  constructor(private http: HttpClient) {}
 
   getUsers() {
-    return this.http.get('/api/users').toPromise();
+    return this.http.get("/api/users").toPromise();
   }
 
   createUser(user) {
-    return this.http.post('/api/users', user).toPromise();
+    return this.http.post("/api/users", user).toPromise();
   }
 }
