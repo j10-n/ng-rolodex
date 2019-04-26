@@ -1,19 +1,41 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>Welcome to {{ title }}!</h1>
+  <h1>{{ title }}</h1>
 </div>
+<app-header></app-header>
+
 <h2>USERS:</h2>
 
 <div class="container">
   <form>
     <label for="user"> Create a User: </label><br />
-    <input type="text" placeholder="username" [(ngModel)]="newUser.username" />
+    <input
+      type="text"
+      placeholder="username"
+      name="username"
+      [(ngModel)]="newUser.username"
+    />
     <br />
-    <input type="text" placeholder="name" [(ngModel)]="newUser.name" />
+    <input
+      type="text"
+      placeholder="name"
+      name="name"
+      [(ngModel)]="newUser.name"
+    />
     <br />
-    <input type="text" placeholder="email" [(ngModel)]="newUser.email" />
+    <input
+      type="text"
+      placeholder="email"
+      name="email"
+      [(ngModel)]="newUser.email"
+    />
     <br />
-    <input type="text" placeholder="address" [(ngModel)]="newUser.email" />
+    <input
+      type="text"
+      placeholder="address"
+      name="address"
+      [(ngModel)]="newUser.address"
+    />
     <br />
     <button (click)="createUser()">Create</button>
   </form>

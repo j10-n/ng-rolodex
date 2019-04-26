@@ -8,9 +8,13 @@ import { BackendService } from "./services/backend.service";
 })
 export class AppComponent {
   title: string = "ng-rolodex";
-  smokeTest: string;
   users: Object[] = [];
-  newUser: { username: string } = { username: "" };
+  newUser: {
+    username: string;
+    name: string;
+    email: string;
+    address: string;
+  } = { username: "", name: "", email: "", address: "" };
 
   constructor(private backend: BackendService) {
     this.backend.getUsers().then((res: Object[]) => {
