@@ -15,12 +15,13 @@ router
       });
   })
   .post((req, res) => {
+    console.log("hitting");
     const username = req.body.username;
     const name = req.body.name;
     const email = req.body.email;
     const address = req.body.address;
-
-    return new req.database.User({ username }, { name }, { email }, { address })
+    console.log("post", req.body);
+    return new req.database.User({ username, name, email, address })
       .save()
       .then(user => {
         return res.json({ success: true });

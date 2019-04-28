@@ -24,4 +24,15 @@
       </li>
     </ul>
   </div>
+
+  <div class="header-right">
+    <div class="logged-in" *ngIf="isLoggedIn()">
+      Welcome, {{ user.username }}
+      <button (click)="logout()">Log Out</button>
+    </div>
+
+    <div class="logged-out" *ngIf="!user.loggedIn">
+      <button (click)="login()">Login</button>
+    </div>
+  </div>
 </div>

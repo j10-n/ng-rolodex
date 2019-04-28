@@ -12,6 +12,7 @@ import { CreateContactsComponent } from "./pages/create-contacts/create-contacts
 import { HomeComponent } from "./pages/home/home.component";
 import { ProfileComponent } from "./pages/profile/profile.component";
 import { ViewAllContactsComponent } from "./pages/view-all-contacts/view-all-contacts.component";
+import { LoginComponent } from "./pages/login/login.component";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ViewAllContactsComponent } from "./pages/view-all-contacts/view-all-con
     CreateContactsComponent,
     HomeComponent,
     ProfileComponent,
-    ViewAllContactsComponent
+    ViewAllContactsComponent,
+    LoginComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
