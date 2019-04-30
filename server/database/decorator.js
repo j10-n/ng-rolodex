@@ -1,8 +1,8 @@
 const User = require("./models/User");
-// const Contact = require("./models/Contact");
+const Contact = require("./models/Contact");
 
 module.exports = function(req, res, next) {
   req.database = { User };
-  // req.database = { Contact };
+  req.database = { Contact };
   next();
 };

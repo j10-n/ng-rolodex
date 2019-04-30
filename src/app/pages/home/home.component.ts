@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { BackendService } from "../../services/backend.service";
 
 @Component({
   selector: "app-home",
@@ -6,5 +7,12 @@ import { Component } from "@angular/core";
   styleUrls: ["./home.component.scss"]
 })
 export class HomeComponent {
-  constructor() {}
+  contacts: Object[] = [];
+
+  constructor(private backend: BackendService) {
+    this.backend.getContacts().then((res: Object[]) => {
+      this.contacts = res;
+      console.log("viewallcontacts", this.contacts);
+    });
+  }
 }

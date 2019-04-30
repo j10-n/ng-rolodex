@@ -7,12 +7,12 @@ import { BackendService } from "../../services/backend.service";
   styleUrls: ["./view-all-contacts.component.scss"]
 })
 export class ViewAllContactsComponent {
-  users: Object[] = [];
+  contacts: Object[] = [];
 
   constructor(private backend: BackendService) {
-    this.backend.getUsers().then((res: Object[]) => {
-      this.users = res;
-      console.log("viewallcontacts", this.users);
+    this.backend.getContacts().then((res: Object[]) => {
+      this.contacts = res;
+      console.log("viewallcontacts", this.contacts);
     });
   }
 }

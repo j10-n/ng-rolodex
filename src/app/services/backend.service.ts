@@ -18,6 +18,15 @@ export class BackendService {
     return this.http.post("/api/users", user).toPromise();
   }
 
+  getContacts() {
+    return this.http.get("/api/contacts").toPromise();
+  }
+
+  createContact(contact) {
+    console.log("backend contact", contact);
+    return this.http.post("/api/contacts", contact).toPromise();
+  }
+
   register(user: { username: string }) {
     const endpoint = (this.url = "/api/register");
     return this.http.post(endpoint, user).toPromise();

@@ -1,38 +1,38 @@
 <h1>create contacts page</h1>
 
-<h2>USERS:</h2>
+<h2>Contacts:</h2>
 <div class="container">
   <form>
-    <label for="user"> Create a User: </label><br />
-    <input
-      type="text"
-      placeholder="username"
-      name="username"
-      [(ngModel)]="newUser.username"
-    />
-    <br />
+    <label for="contact"> Create a Contact: </label><br />
     <input
       type="text"
       placeholder="name"
       name="name"
-      [(ngModel)]="newUser.name"
+      [(ngModel)]="newContact.name"
     />
     <br />
     <input
       type="text"
       placeholder="email"
       name="email"
-      [(ngModel)]="newUser.email"
+      [(ngModel)]="newContact.email"
+    />
+    <br />
+    <input
+      type="text"
+      placeholder="mobile"
+      name="mobile"
+      [(ngModel)]="newContact.mobile"
     />
     <br />
     <input
       type="text"
       placeholder="address"
       name="address"
-      [(ngModel)]="newUser.address"
+      [(ngModel)]="newContact.address"
     />
     <br />
-    <button (click)="createUser()">Create</button>
+    <button (click)="createContact()">Create</button>
   </form>
   <br />
 </div>

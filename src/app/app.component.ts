@@ -8,28 +8,28 @@ import { BackendService } from "./services/backend.service";
 })
 export class AppComponent {
   title: string = "ng-rolodex";
-  users: Object[] = [];
-  newUser: {
-    username: string;
+  contacts: Object[] = [];
+  newContact: {
     name: string;
     email: string;
+    mobile: string;
     address: string;
-  } = { username: "", name: "", email: "", address: "" };
+  } = { name: "", email: "", mobile: "", address: "" };
 
   constructor(private backend: BackendService) {
-    this.backend.getUsers().then((res: Object[]) => {
-      this.users = res;
+    this.backend.getContacts().then((res: Object[]) => {
+      this.contacts = res;
     });
   }
 
-  createUser() {
+  createContact() {
     this.backend
-      .createUser(this.newUser)
+      .createContact(this.newContact)
       .then(() => {
-        return this.backend.getUsers();
+        return this.backend.getContacts();
       })
       .then((res: Object[]) => {
-        this.users = res;
+        this.contacts = res;
       });
   }
 }

@@ -1,5 +1,14 @@
+<link
+  href="https://fonts.googleapis.com/css?family=Press+Start+2P|Quantico"
+  rel="stylesheet"
+/>
+
 <div class="header-container">
   <div class="header-left">
+    <h2>NG-ROLODEX</h2>
+  </div>
+
+  <div class="header-right">
     <ul>
       <li>
         <h2>
@@ -25,14 +34,12 @@
     </ul>
   </div>
 
-  <div class="header-right">
-    <div class="logged-in" *ngIf="isLoggedIn()">
-      Welcome, {{ user.username }}
-      <button (click)="logout()">Log Out</button>
-    </div>
+  <div class="logged-in" *ngIf="isLoggedIn()">
+    Welcome, {{ user.username }}
+    <button (click)="logout()">Log Out</button>
+  </div>
 
-    <div class="logged-out" *ngIf="!user.loggedIn">
-      <button (click)="login()">Login</button>
-    </div>
+  <div class="logged-out" *ngIf="!user.loggedIn">
+    <button (click)="login()">Login</button>
   </div>
 </div>

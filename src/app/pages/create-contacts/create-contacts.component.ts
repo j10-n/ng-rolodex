@@ -7,24 +7,24 @@ import { BackendService } from "../../services/backend.service";
   styleUrls: ["./create-contacts.component.scss"]
 })
 export class CreateContactsComponent {
-  users: Object[] = [];
+  contacts: Object[] = [];
 
-  newUser: { username: string; name: string } = { username: "", name: "" };
+  newContact: {} = {};
   constructor(private backend: BackendService) {
-    this.backend.getUsers().then((res: Object[]) => {
-      this.users = res;
+    this.backend.getContacts().then((res: Object[]) => {
+      this.contacts = res;
     });
   }
 
-  createUser() {
-    console.log("this.createUser", this.newUser);
+  createContact() {
+    console.log("this.createContact", this.newContact);
     this.backend
-      .createUser(this.newUser)
+      .createContact(this.newContact)
       .then(() => {
-        return this.backend.getUsers();
+        return this.backend.getContacts();
       })
       .then((res: Object[]) => {
-        this.users = res;
+        this.contacts = res;
       });
   }
 }

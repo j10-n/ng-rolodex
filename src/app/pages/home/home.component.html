@@ -1,1 +1,12 @@
 <h1>home page</h1>
+<input type="text" ng-model="searchText" />
+<div class="container">
+  <!-- <div class="card" *ngFor="let contact of contacts"> -->
+  <div class="card" ng-repeat="let contact of contacts | filter: searchText">
+    {{ contact.name }}
+    <!-- Name: {{ contact.name }}<br />
+      Email: {{ contact.email }}<br />
+      Mobile: {{ contact.mobile }}<br />
+      Address: {{ contact.address }}<br /><br /> -->
+  </div>
+</div>

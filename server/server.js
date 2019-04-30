@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const userRoutes = require("./routes/users");
+const contactRoutes = require("./routes/contacts");
 const decorator = require("./database/decorator");
 
 // data vars
@@ -30,6 +31,7 @@ app.use(decorator);
 
 // routes
 app.use("/api", userRoutes);
+app.use("/api", contactRoutes);
 
 // start server
 app.listen(PORT, () => {

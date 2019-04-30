@@ -1,6 +1,6 @@
 const bookshelf = require("../bookshelf");
 
-class User extends bookshelf.Model {
+class Contact extends bookshelf.Model {
   get tableName() {
     return "contacts";
   }
