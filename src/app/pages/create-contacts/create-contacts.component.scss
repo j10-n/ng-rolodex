@@ -2,3 +2,25 @@
   height: 100%;
   background-color: #bfcbc2;
 }
+label {
+  align-content: center;
+  font-family: "Press Start 2P", sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+}
+input {
+  font-family: "Press Start 2P", sans-serif;
+}
+button {
+  font-family: "Quantico", sans-serif;
+}
+
+.contactform {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  align-content: center;
+  padding: 30px;
+  border: 1px solid darken(#d1d0a3, 10%);
+  background-color: lighten(#d1d0a3, 15%);
+}

@@ -25,6 +25,7 @@ export class CreateContactsComponent {
       })
       .then((res: Object[]) => {
         this.contacts = res;
+        alert("Contact Created!");
       });
   }
 }

@@ -1,8 +1,5 @@
-<h1>create contacts page</h1>
-
-<h2>Contacts:</h2>
 <div class="container">
-  <form>
+  <form class="contactform">
     <label for="contact"> Create a Contact: </label><br />
     <input
       type="text"
@@ -32,7 +29,7 @@
       [(ngModel)]="newContact.address"
     />
     <br />
-    <button (click)="createContact()">Create</button>
+    <button (click)="createContact()">CREATE</button>
   </form>
   <br />
 </div>
