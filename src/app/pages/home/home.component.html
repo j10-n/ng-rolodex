@@ -1,12 +1,8 @@
 <div class="search">
-  <input type="text" ng-model="searchText.name" placeholder="search name" />
+  <input type="text" [(ngModel)]="query" placeholder="search name" />
 </div>
 <div class="container">
-  <div
-    class="card"
-    *ngFor="let contact of (contacts | filter: searchText)"
-    ngrepeat="contact in contacts "
-  >
+  <div class="card" *ngFor="let contact of (contacts | search: 'name':query)">
     Name: {{ contact.name }}<br />
     Email: {{ contact.email }}<br />
     Mobile: {{ contact.mobile }}<br />

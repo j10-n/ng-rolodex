@@ -5,7 +5,7 @@ import { FormsModule } from "@angular/forms";
 
 // Shared Components
 import { HeaderComponent } from "./shared/header/header.component";
-import { FilterPipe } from "./filter.pipe";
+import { SearchPipe } from "./search.pipe";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -24,7 +24,7 @@ import { LoginComponent } from "./pages/login/login.component";
     ProfileComponent,
     ViewAllContactsComponent,
     LoginComponent,
-    FilterPipe
+    SearchPipe
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
